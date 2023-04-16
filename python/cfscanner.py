@@ -117,14 +117,14 @@ if __name__ == "__main__":
         console.log(
             f"[blue]Subnets successfully read from \"{args.subnets}\"[/blue]")
     else:
-        subnets_default_address = "https://raw.githubusercontent.com/MortezaBashsiz/CFScanner/main/config/cf.local.iplist"
+        subnets_default_address = "https://raw.githubusercontent.com/HosseinCods/CFScanner/main/config/cf.local.iplist"
         console.log(
             f"[blue]Subnets not provided. Default address will be used:\n\"{subnets_default_address}\"[/blue]"
         )
         with console.status(f"[green]Retrieving subnets from \"{subnets_default_address}\"[/green]"):
             try:
                 cidr_list = read_cidrs(
-                    "https://raw.githubusercontent.com/MortezaBashsiz/CFScanner/main/config/cf.local.iplist"
+                    "https://raw.githubusercontent.com/HosseinCods/CFScanner/main/config/cf.local.iplist"
                 )
             except SubnetsReadError as e:
                 console.log(f"[red]Could not read subnets. {e}[/red]")
